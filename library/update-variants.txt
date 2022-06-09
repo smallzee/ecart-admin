@@ -1,0 +1,11 @@
+Note - Keep fields blank if you don't want to change.
+
+Type  -> Type of the variant (must be packet / loose case sensitive).
+Measurement  -> Measurement of the variant.
+Measurement Unit ID  - > Measurement Unit ID of the variant (You can find Measurement Unit ID in settings > units section).
+Price ->  Price of the variant. (Must be greater than discounted price).
+Discounted Price  -> Discounted Price of the variant 0 if no discount. (Must be less than price).
+Serve For  -> Availability of the variant (Must be Sold Out / Available case sensitive).
+stock  -> Stock available.
+Stock Unit ID  -> Stock Unit ID of the product variant (You can find Stock Unit ID in settings > units section).
+Product ID  -> Product ID of the variant (You can find it in products table).

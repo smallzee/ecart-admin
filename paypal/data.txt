@@ -1,0 +1,27 @@
+cmd=_notify-validate&mc_gross=1.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=SSK754FSS499U&address_street=Flat+no.+507+Wing+A+Raheja+Residency%0D%0AFilm+City+Road%2C+Goregaon+East&payment_date=06%3A09%3A56+Sep+28%2C+2020+PDT&payment_status=Completed&charset=windows-1252&address_zip=400097&first_name=Jaydeep&mc_fee=0.34&address_country_code=IN&address_name=Jaydeep+Goswami&notify_version=3.9&custom=&payer_status=verified&business=seller%40somedomain.com&address_country=India&address_city=Mumbai&quantity=1&verify_sign=AohMEl4aHVH3yY5YnM7OsQUBWkYJACXvEJKs1JnD0LJ9mYaOf7g-7XpN&payer_email=testing%40infinitietech.com&txn_id=04D04513G18076526&payment_type=instant&last_name=Goswami&address_state=Maharashtra&receiver_email=seller%40somedomain.com&payment_fee=0.34&shipping_discount=0.00&insurance_amount=0.00&receiver_id=DZ3YWFQA2B3Q8&txn_type=web_accept&item_name=eKart+product&discount=0.00&mc_currency=USD&item_number=1001&residence_country=IN&test_ipn=1&shipping_method=Default&transaction_subject=&payment_gross=1.00&ipn_track_id=7f723d2c0675Transaction success : 04D04513G18076526 
+Array
+(
+    [item_name] => eKart product
+    [item_number] => 1001
+    [payment_status] => Completed
+    [payment_amount] => 1.00
+    [payment_currency] => INR
+    [txn_id] => 4ME55116J11587459
+    [receiver_email] => jaydeepjgiri-facilitator@yahoo.com
+    [payer_email] => testing@infinitietech.com
+    [custom] => 
+)
+Transaction success : 4ME55116J11587459 
+Array
+(
+    [item_name] => eKart product
+    [item_number] => 1001
+    [payment_status] => Completed
+    [payment_amount] => 1.00
+    [payment_currency] => INR
+    [txn_id] => 2E863408666455352
+    [receiver_email] => jaydeepjgiri-facilitator@yahoo.com
+    [payer_email] => testing@infinitietech.com
+    [custom] => 
+)
+Transaction success : 2E863408666455352 

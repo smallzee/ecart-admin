@@ -1,0 +1,24 @@
+[26-Jul-2020 22:44:13 America/Boise] PHP Fatal error:  Uncaught Error: Class 'Razorpay\Api\Entity' not found in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Card.php:5
+Stack trace:
+#0 {main}
+  thrown in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Card.php on line 5
+[26-Jul-2020 22:44:20 America/Boise] PHP Fatal error:  Uncaught Error: Class 'Razorpay\Api\Entity' not found in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Invoice.php:12
+Stack trace:
+#0 {main}
+  thrown in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Invoice.php on line 12
+[26-Jul-2020 22:44:28 America/Boise] PHP Fatal error:  Uncaught Error: Class 'Razorpay\Api\Entity' not found in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Transfer.php:4
+Stack trace:
+#0 {main}
+  thrown in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Transfer.php on line 4
+[26-Jul-2020 22:44:35 America/Boise] PHP Fatal error:  Uncaught Error: Class 'Razorpay\Api\Entity' not found in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/VirtualAccount.php:5
+Stack trace:
+#0 {main}
+  thrown in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/VirtualAccount.php on line 5
+[26-Jul-2020 22:44:46 America/Boise] PHP Fatal error:  Uncaught Error: Class 'Razorpay\Api\Entity' not found in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Subscription.php:5
+Stack trace:
+#0 {main}
+  thrown in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Subscription.php on line 5
+[26-Jul-2020 22:44:59 America/Boise] PHP Fatal error:  Uncaught Error: Class 'Razorpay\Api\Entity' not found in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Addon.php:5
+Stack trace:
+#0 {main}
+  thrown in /home4/wrteamin/public_html/ekart/api-firebase/razorpay/src/Addon.php on line 5

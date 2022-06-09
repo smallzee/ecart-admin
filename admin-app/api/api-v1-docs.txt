@@ -1,0 +1,197 @@
+API URL -->> 
+        https://newekart.wrteam.in/admin-app/api/api-v1.php
+
+----------------------------------------------------------
+APIs list 
+----------------------------------------------------------
+
+1. get_orders
+2. get_customers
+3. get_products
+4. get_delivery_boys
+5. get_financial_statistics
+6. login
+7. update_admin_fcm_id
+8. get_privacy_and_terms
+9. update_order_status
+10. get_permissions
+11. update_order_item_status
+12. add_delivery_boy
+13. update_delivery_boy
+14. delete_delivery_boy
+15. delivery_boy_fund_transfers
+16. delivery_boy_transfer_fund
+
+
+
+------------------------------------------
+What parameters to be Passed?  See here >>
+------------------------------------------
+
+Use POST method to pass the parameters
+
+1.get_orders
+        accesskey:90336
+        get_orders:1
+        order_id:12      {optional}
+        start_date:2020-10-29  {optional} {YYYY-mm-dd}
+        end_date:2020-10-29  {optional} {YYYY-mm-dd}
+        filter_order:received | processed | shipped | delivered | cancelled | returned  {optional}
+        limit:10  {optional}
+		offset:0    {optional}
+		sort:id      {optional}
+		order:ASC/DESC {optional}
+		search:value {optional}
+
+2.get_customers
+        accesskey:90336
+        get_customers:1
+        city_id:119  {optional}
+        limit:10  {optional}
+        offset:0    {optional}
+        sort:id      {optional}
+        order:ASC/DESC {optional}
+        search:value {optional}
+
+3.get_products
+        accesskey:90336
+        get_products:1
+        id:119  {optional}
+        category_id:119  {optional}
+        subcategory_id:119  {optional}
+        limit:10 // {optional}
+        offset:0 // {optional}
+        sort:new / old / high / low // {optional}
+        search:value {optional}
+
+4.get_delivery_boys
+        accesskey:90336
+        get_delivery_boys:1
+        id:292  {optional}
+        limit:10  {optional}
+        offset:0    {optional}
+        sort:id      {optional}
+        order:ASC/DESC {optional}
+        search:value {optional}
+
+5. get_financial_statistics
+        accesskey:90336
+        get_financial_statistics:1
+
+6.login
+        accesskey:90336
+        username:admin
+        password:admin123
+        fcm_id:YOUR_FCM_ID   {optional}
+        login:1
+
+7.update_admin_fcm_id
+        accesskey:90336
+        id:1
+        fcm_id:YOUR_FCM_ID
+        update_admin_fcm_id:1
+
+8. get_privacy_and_terms
+        accesskey:90336
+        get_privacy_and_terms:1
+
+9.update_order_status
+        accesskey:90336
+        update_order_status:1
+        id:169
+        status:cancelled
+        delivery_boy_id:20{optional}
+
+10.get_permissions
+        accesskey:90336
+	    id:1
+        get_permissions:1
+        type: orders/payment/customers/featured/products_order/products/subcategories/categories/home_sliders/faqs/reports/locations/settings/transactions/notifications/return_requests/delivery_boys/promo_codes/new_offers   // {optional}
+
+11.update_order_item_status
+        accesskey:90336
+        update_order_item_status:1
+        order_item_id:7166
+        status:cancelled
+        order_id:3445
+
+12.add_delivery_boy
+        accesskey:90336
+        add_delivery_boy:1
+        name:delivery_boy
+        mobile:9963258652
+        address:time square
+        bonus:10
+        dob:2020-09-12
+        bank_name:SBI
+        other_payment_info:description {optional}
+        account_number:12547896523652
+        account_name:DEMO
+        ifsc_code:254SBIfbfg
+        password:asd124
+        driving_license:image_file
+        national_identity_card :image_file 
+
+13.update_delivery_boy
+        accesskey:90336
+        update_delivery_boy:1
+        id:302
+        name:delivery_boy
+        mobile:9963258652
+        address:time square
+        bonus:10
+        dob:2020-09-12
+        bank_name:SBI
+        other_payment_info:description 
+        account_number:12547896523652
+        account_name:DEMO
+        ifsc_code:254SBIfbfg
+        password:asd124
+        status:1
+        driving_license:image_file ( image type must jpg, jpeg, gif, or png!)      // {optional}
+        national_identity_card :image_file ( image type must jpg, jpeg, gif, or png!) // {optional}
+
+14.delete_delivery_boy
+        accesskey:90336
+        delete_delivery_boy:1		
+        id:302
+
+15.delivery_boy_fund_transfers
+        accesskey:90336
+        delivery_boy_fund_transfers:1
+        delivery_boy_id:104   {optional}
+        limit:10    {optional}
+        offset:0     {optional}
+        sort:id       {optional}
+        order:ASC/DESC   {optional}
+        search:value  {optional}
+
+16. delivery_boy_transfer_fund
+        accesskey:90336
+        delivery_boy_transfer_fund:1		
+        delivery_boy_id:302
+        delivery_boy_balance:20
+        amount:20
+        message: message from admin {optional}
+
+17.get_all_data
+	   	accesskey:90336
+		get_all_data:1
+
+18.get_categories
+        accesskey:90336
+        get_categories:1
+        category_id:28   {optional}
+        limit:10  {optional}
+        offset:0    {optional}
+        sort:id      {optional}
+        order:ASC/DESC {optional}
+
+19. get_subcategories
+        accesskey:90336
+        get_subcategories:1
+        category_id:28   {optional}
+        limit:10  {optional}
+        offset:0    {optional}
+        sort:id      {optional}
+        order:ASC/DESC {optional}

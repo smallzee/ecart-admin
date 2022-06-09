@@ -1,0 +1,11 @@
+Note - * indicates mandatory fields.
+
+Type * -> Type of the variant (must be packet / loose case sensitive).
+Measurement * -> Measurement of the variant.
+Measurement Unit ID * - > Measurement Unit ID of the variant.
+Price -> * Price of the variant. (Must be greater than discounted price).
+Discounted Price * -> Discounted Price of the variant 0 if no discount. (Must be less than price).
+Serve For * -> Availability of the variant (Must be Sold Out / Available case sensitive).
+stock * -> Stock available.
+Stock Unit ID * -> Stock Unit ID of the product variant.
+Product ID * -> Product ID of the variant (You can find it in products table).

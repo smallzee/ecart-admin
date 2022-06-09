@@ -1,0 +1,15 @@
+Note - Keep fields blank if you don't want to change
+
+Product Name  -> Name of the product. 
+Category ID  -> Category ID of the product (You can find Category ID in Categories section).
+Subcategory ID  -> Subcategory ID of the product (You can find Subcategory ID in Subcategories section).
+Indicator  -> 0 - None, 1 - Veg, 2 - Non-Veg.
+Manufacturer -> Manufacturer of the product.
+Made in -> Product Made In.
+Is Returnable  -> 0 - No, 1 - Yes.
+Is cancel-able  -> 0 - No, 1 - Yes.
+Till which status -> If Is cancel-able than till wich status.
+Description -> Description about product.
+image -> Image of the product
+
+Note - Product image need  to be upload manually.

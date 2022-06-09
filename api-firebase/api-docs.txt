@@ -1,0 +1,539 @@
+API URL -->> 
+/*	https://wrteam.in/ekart/api-firebase/   */
+
+	https://newekart.wrteam.in/api-firebase/
+
+----------------------------------------------------------
+API Files list 
+----------------------------------------------------------
+1. get-categories.php
+2. get-subcategories-by-category-id.php
+3. offer-images.php
+4. get-products-by-category-id.php
+5. get-products-by-subcategory-id.php
+6. get-product-by-id.php
+7. order-process.php
+8. register-device.php
+9. user-registration.php
+10. login.php
+11. products-search.php
+12. sections.php
+13. settings.php
+14. slider-images.php
+15. get-areas-by-city-id.php
+16. get-categories.php
+17. get-cities.php
+18. payment-request.php
+19. get-user-data.php
+20. get-all-products.php
+21. validate-promo-code.php
+22. ../paypal/create-payment.php
+23. create-razorpay-order.php
+24. cart.php
+25. get-user-transactions.php
+26. user-addresses.php
+27. favorites.php
+28. get-products-offline.php
+29. get-variants-ofline.php
+30. remove-fcm-id.php
+31. get-faqs.php
+32. get-similar-products.php
+33. get-all-data.php
+34. ../midtrans/create-payment.php
+35. ../stripe/index.php
+
+
+
+------------------------------------------
+What parameters to be Passed?  See here >>
+------------------------------------------
+
+Use POST method to pass the parameters
+
+1. get-categories.php
+	    accesskey:90336
+
+2. get-subcategories-by-category-id.php
+	    accesskey:90336
+	    ategory_id:28
+
+2. get-cities.php
+	    accesskey:90336
+	
+3. offer-images.php
+        accesskey:90336
+        get-offer-imagese:1
+
+4. get-products-by-category-id.php
+        accesskey:90336
+        category_id:28
+        user_id:369 {optional}
+        limit:10 // {optional}
+        offset:0 // {optional}
+        sort:new / old / high / low // {optional}
+
+5. get-products-by-subcategory-id.php
+        accesskey:90336
+        subcategory_id:63
+        user_id:369 {optional}
+        limit:10 // {optional}
+        offset:0 // {optional}
+        sort:new / old / high / low // {optional}
+
+6. get-product-by-id.php
+        accesskey:90336
+        product_id:230
+        user_id:369 {optional}
+
+7. order-process.php
+
+	i. Place_order
+		accesskey:90336
+		place_order:1
+		user_id:5
+		mobile:9974692496
+        order_note:home
+		product_variant_id:["56","58","75"]
+		quantity:["3","3","1"]
+		total:60.0
+		delivery_charge:20.0
+		tax_amount:10
+        tax_percentage:10
+		wallet_balance:20
+		wallet_used:true / false
+		discount:10
+		final_total:55
+		latitude:44.968046
+		longitude:-94.420307
+		payment_method: Paypal / Payumoney / COD / PAYTM
+		promo_code:NEW20 {optional}
+		address:bhuj
+		delivery_time:Today - Evening (4:00pm to 7:00pm)
+		status: awaiting_payment  {optional}
+		
+	ii. get_orders
+        accesskey:90336
+        get_orders:73
+        user_id:101
+		status:received | processed | shipped | delivered | cancelled | returned   {optional}
+        limit:20 {optional}
+        offset:5 {optional}
+
+	iii. update_order_status
+		accesskey:90336
+		update_order_status:1
+		id:169
+		status:cancelled
+		delivery_boy_id:20{optional}
+
+	iv. get_settings
+		accesskey:90336
+		get_settings:1
+
+	v. update_order_total_payable
+		accesskey:90336
+		update_order_total_payable:1
+		id:5
+		deliver_by:sagar
+		discount:10
+		total_payble:60.0
+		
+	vi. add_transaction
+        add_transaction:1
+	    accesskey:90336
+	    user_id:1
+	    order_id:1001
+	    type:payumoney / paypal
+	    txn_id:PAYMENT_GATEWAY_TXN_ID
+	    amount:89.00
+	    status:success / Completed / failed / pending // { anything returned from payment gateway }
+	    message:Message from payment gateway for successful / failure transaction
+		transaction_date:2019-11-29 13:15:00
+		
+	vii. update_order_item_status
+	     accesskey:90336
+	     update_order_item_status:1
+	     order_item_id:1
+	     order_id:1
+	     status:processed
+		
+	viii. delete_order
+	 	accesskey:90336
+		delete_order:1
+    	order_id:73
+
+    ix. get_reorder_data
+        accesskey:90336
+        id:12 // order_id
+	    
+
+8. register-device.php
+        accesskey:90336 
+        user_id:500
+        token:227
+
+9. user-registration.php
+
+	i. Verify User
+		accesskey:90336
+		type:verify-user
+		mobile:8980834200
+		
+
+	ii. After successful OTP verification Register User
+		accesskey:90336
+		type:register
+		name:Jaydeep Goswami
+		email:jaydeepjgiri@yahoo.com
+		password:36652
+		country_code:91
+		mobile:7894561230
+		fcm_id:YOUR_FCM_ID
+		dob:15-12-1990
+		city_id:1
+		area_id:1
+		street: bhuj
+		pincode: 191104
+		api_key:abc@123
+		referral_code:QCZYBEXHK5
+		friends_code:FFREGRGSD7{optional}
+		latitude:44.968046
+		longitude:-94.420307
+		profile:file {optional}
+		
+
+	iii. Edit the user profile
+		accesskey:90336
+		type:edit-profile
+		id:5
+		name:Jaydeep Goswami
+		email:jaydeepjgiri@yahoo.com
+		password:36652
+		city_id:1
+		area_id:1
+		street: bhuj
+		pincode: 191104
+		dob:15-12-1990
+		latitude:44.968046
+		longitude:-94.420307
+		profile:file {optional}
+
+	iv. Change the password
+		accesskey:90336
+		type:change-password
+		id:5
+		password:36652
+
+	v. To reset / recover password via email
+		accesskey:90336
+		type:forgot-password-email
+		email:jaydeepjgiri@yahoo.com
+
+	vi. To reset / recover password via mobile number
+		accesskey:90336
+		type:forgot-password-mobile
+		mobile:7894561230
+
+	vii. To register user's FCM token
+		accesskey:90336
+		type:register-device
+		user_id:16
+		token:1155
+	
+	viii. upload_profile
+		accesskey:90336
+		type:upload_profile
+		profile:file
+		user_id:16
+
+10. login.php
+        accesskey:90336
+        mobile:9876543210
+        password:123456
+        fcm_id:YOUR_FCM_ID
+
+11. products-search.php
+        accesskey:90336
+        type:products-search
+        search:Powder
+
+12. sections.php
+	i. Get all sections 
+	    accesskey:90336
+        get-all-sections:1
+        user_id : 369 {optional} 
+        section_id:99 {optional}
+	
+	ii. To get notifications pagination wise
+        accesskey:90336
+        get-notifications:1
+        limit:10            // {optional }
+        offset:0            // {optional }
+        sort:id / type      // {optional }
+        order:DESC / ASC    // {optional }
+    
+    iii. To get delivery boy notifications pagination wise
+	    get-delivery-boy-notifications:1
+        delivery_boy_id:10  // {optional }
+        type:order_status/order_reward  // {optional }
+        limit:10            // {optional }
+        offset:0            // {optional }
+        sort:id / type      // {optional }
+        order:DESC / ASC    // {optional }
+	
+
+13. settings.php
+        accesskey:90336
+        settings:1
+        get_privacy:1 / get_terms:1 / get_logo:1 / get_contact:1 / get_timezone:1 / get_fcm_key:1 / get_time_slot_config:1 / get_about_us:1 / get_front_end_settings:1
+	
+14. slider-images.php
+        accesskey:90336
+        get-slider-images:1
+	
+15. get-areas-by-city-id.php
+        accesskey:90336
+        city_id:1
+        keyword:search
+	
+16. get-categories.php
+	    accesskey:90336
+	
+17. get-cities.php
+        accesskey:90336
+        city_id:1{optional}
+
+18. payment-request.php
+    i. payment_request
+            accesskey:90336
+            payment_request:1
+            user_id:5
+            payment_type:mobile {OR} bank
+            payment_address:9876543210 {OR} [["account_holder_name","girish"],["account_number","13062019010"],["ifsc_code","BOBDUD"],["bank","BOB"]]
+            amount_requested:100
+
+    ii. get_payment_request
+            accesskey:90336
+            get_payment_requests:1
+            user_id:5
+
+    iii.verify_paystack_transaction
+        accesskey:90336
+        verify_paystack_transaction:1
+        email:customer@gmail.com
+        amount:27000
+        reference:T071240102627662
+        	 
+19. get-user-data.php
+        accesskey:90336
+        get_user_data:1
+        user_id:1
+	
+20. get-all-products.php
+    i. get_all_products
+            accesskey:90336
+  	        user_id:369 {optional}
+		    get_all_products:1
+    ii. get_all_products_name
+            accesskey:90336
+		    get_all_products_name:1
+    
+21. validate-promo-code.php
+        accesskey:90336
+        validate_promo_code:1
+        user_id:101
+        promo_code:NEW20
+        total:500
+
+22. create-payment.php
+        accesskey:90336
+        first_name:Jaydeep
+        last_name:Goswami
+        item_number:110
+        item_name:eKart
+        amount:100
+        payer_email:testing@infinitietech.com
+
+23. create-razorpay-order.php
+        accesskey:90336
+        amount:100
+
+24. cart.php
+	accesskey:90336
+    1. add_to_cart
+		add_to_cart:1
+		user_id:3
+		product_id:1
+		product_variant_id:4
+		qty:2
+
+	2.add_multiple_items_to_cart
+		accesskey:90336
+		add_multiple_items:1
+		user_id:3
+		product_variant_id:203,198,202
+		qty:1,2,1
+
+	3. remove_from_cart
+		remove_from_cart:1
+		user_id:3
+		product_variant_id:4 {optional}
+
+	4. get_user_cart
+		get_user_cart:1
+		user_id:3
+		offset:0 {optional}
+    	limit:5 {optional}
+
+25. get-user-transactions.php
+	i. 	get_user_transactions
+
+		accesskey:90336
+		get_user_transactions:1
+		user_id:3
+		type:transactions/wallet_transactions
+		offset:0 {optional}
+		limit:5 {optional}
+	
+	ii. add_wallet_balance
+
+		accesskey:90336
+		add_wallet_balance:1
+		user_id:3
+		amount:100
+		type:credit
+		message: transaction by user {optional}
+
+26. user-addresses.php
+	accesskey:90336
+    1. add_address
+        add_address:1
+        user_id:3
+        type:Home/Office
+        name:John Smith
+        country_code:+91  {optional}
+        mobile:1234567890
+        alternate_mobile:9876543210 {optional}
+        address:Time Square Empire
+        landmark:Bhuj-Mirzapar Highway
+        area_id:1
+        city_id:2
+        pincode:0123456
+        state:Gujarat
+        country:India
+        latitude:value {optional}
+        longitude:value {optional}
+        is_default:0/1 {optional}
+
+	2. update_address
+		update_address:1
+		id:1
+		user_id:1
+		type:Home/Office {optional}
+		name:John Smith {optional}
+		country_code:+91 {optional}
+		mobile:1234567890 {optional}
+		alternate_mobile:9876543210 {optional}
+		address:Time Square Empire {optional}
+		landmark:Bhuj-Mirzapar Highway {optional}
+		area_id:1 {optional}
+		city_id:2 {optional}
+		pincode:0123456 {optional}
+		state:Gujarat {optional}
+		country:India {optional}
+		state:Gujarat {optional}
+    	country:India {optional}
+		latitude:value {optional}
+    	longitude:value {optional}
+		is_default:0/1
+
+	3. delete_address
+		delete_address:1
+    	id:3
+
+	4. get_addresses
+		get_addresses:1
+		user_id:3
+		offset:0 {optional}
+		limit:5 {optional}
+
+27. favorites.php
+	accesskey:90336
+    1. add_to_favorites
+		add_to_favorites:1
+		user_id:3
+		product_id:1
+
+	2. remove_from_favorites
+		remove_from_favorites:1
+    	id:3 OR user_id : 413 OR (user_id:3 and product_id:301)
+
+	3. get_favorites
+		get_favorites:1
+		user_id:3
+		offset:0 {optional}
+		limit:5 {optional}
+		
+28. get-products-offline.php
+        accesskey:90336
+        get_products_offline:1
+        product_ids:214,21
+    
+29. get-variants-offline.php
+        accesskey:90336
+        get_variants_offline:1
+        variant_ids:55,56
+        
+30. remove-fcm-id.php
+        accesskey:90336
+        remove_fcm_id:1
+        user_id:369
+
+31. get-faqs.php
+		accesskey:90336
+		get_faqs:1
+		offset:0        // {optional}
+		limit:10        // {optional}
+		sort:id           // {optional}
+		order:DESC / ASC            // {optional}
+
+32. get-similar-products.php
+	 	accesskey:90336
+		get_similar_products:369
+		product_id:215
+		category_id:30
+		limit:6          // {optional}
+
+33. get-all-data.php
+	   	accesskey:90336
+		user_id:413 {optional}
+
+34. create-payment.php
+        accesskey:90336
+        order_id:13
+        gross_amount:12900
+
+35. ../stripe/create-payment.php
+        accesskey:90336
+        name:username
+        address_line1:jubeli_circle {optional}
+        postal_code:12345
+        city:bhuj
+        amount:123456
+        order_id:12345
+
+36. ../paytm/generate-checksum.php
+        accesskey:90336
+        ORDER_ID:10045
+        CUST_ID:45021
+        INDUSTRY_TYPE_ID:451287
+        CHANNEL_ID:789854654
+        TXN_AMOUNT:1.00
+        WEBSITE:https://paytm.com/
+        CALLBACK_URL:https://securegw.paytm.in/theia/paytmCallback?ORDER_ID=
+
+37. ../paytm/valid-transction.php
+        accesskey:90336
+        orderId:OvgSiUdy1lzf9EA6Nqd2
+
+    
